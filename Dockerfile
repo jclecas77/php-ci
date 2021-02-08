@@ -7,7 +7,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN \
     apt-get update \
     && apt-get install -y \
-        libfreetype6-dev libicu-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libxml2-utils libxslt-dev php7.3-zip \
+        libfreetype6-dev libicu-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libxml2-utils libxslt-dev \
+    && apt-get install -y zip \
     && apt-get clean autoclean autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 

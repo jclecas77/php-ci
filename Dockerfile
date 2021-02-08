@@ -29,7 +29,7 @@ RUN \
     && apt-get install -y \
         ack-grep bsdmainutils dos2unix gettext git gnupg graphviz jq moreutils nano python python3 python-pip python3-pip shellcheck sshpass unzip zip \
         python-dev python3-dev \
-    && echo "extension=zip.so" >> /usr/local/etc/php/conf.d/php.ini
+    && echo "extension=zip.so" >> /usr/local/etc/php/conf.d/php.ini \
     && apt-get clean autoclean autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
